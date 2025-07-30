@@ -7,7 +7,7 @@ dotenv.config();
 
 const config: HardhatUserConfig = {
   solidity: "0.8.28",
-  defaultNetwork: "base",
+  defaultNetwork: "devnet",
   networks: {
     devnet: {
       url: "https://devnet.uminetwork.com",

@@ -6,8 +6,8 @@ contract Counter{
     uint public count;
     address public owner;
 
-    constructor(uint _owner){
-        count = _owner;
+    constructor(address _owner){
+        owner = _owner;
     }
 
     function increment() public {
