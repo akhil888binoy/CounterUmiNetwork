@@ -1,6 +1,5 @@
 import { HardhatUserConfig } from "hardhat/config";
 import "@nomicfoundation/hardhat-toolbox";
-import '@moved/hardhat-plugin';
 import * as dotenv from "dotenv";
 
 dotenv.config();
@@ -10,13 +9,13 @@ const config: HardhatUserConfig = {
   defaultNetwork: "devnet",
   networks: {
     devnet: {
-      url: "https://devnet.uminetwork.com",
+      url: "https://devnet.uminetwork.com/evm",
       accounts: [process.env.PRIVATE_KEY!]
     },
-    base :{
-      url: "https://sepolia.base.org",
-      accounts: [ process.env.PRIVATE_KEY!]
-    }
+    // base :{
+    //   url: "https://sepolia.base.org",
+    //   accounts: [ process.env.PRIVATE_KEY!]
+    // }
   }
 };
 

@@ -10,8 +10,10 @@ async function main() {
 
   const Counter = await ethers.getContractFactory('Counter');
   const counter = await Counter.deploy(multiSigAdmin);
+  console.log("Wait for deployment");
   await counter.waitForDeployment();
   // Get the generated contract address from the transaction receipt, don't use `await counter.getAddress()`
+  console.log('Getting Receipt');
   const receipt = await ethers.provider.getTransactionReceipt(counter.deploymentTransaction()?.hash!);
   console.log('Counter is deployed to:', receipt?.contractAddress);
 }
